@@ -21,14 +21,14 @@ The project was done for the fulfillment of ENGG 102 (2nd Semester Project).
 
 ## Screenshots:
 ![Splash Screen](./img/splash_screen.gif)
-![Register](./Screenshots/register.png)
-![Login](./Screenshots/login.png)
-![Reset](./Screenshots/reset.png)
-![MainWindow](./Screenshots/mainwindow.png)
-![Export](./Screenshots/export.png)
-![Graph1](./Screenshots/graph_1.png)
-![Graph2](./Screenshots/graph_2.png)
-![Sorted](./Screenshots/sorted.png)
-![Filtered](./Screenshots/filtered.png)
+![Register](./Screenshots/register.PNG)
+![Login](./Screenshots/login.PNG)
+![Reset](./Screenshots/reset.PNG)
+![MainWindow](./Screenshots/mainwindow.PNG)
+![Export](./Screenshots/export.PNG)
+![Graph1](./Screenshots/graph_1.PNG)
+![Graph2](./Screenshots/graph_2.PNG)
+![Sorted](./Screenshots/sorted.PNG)
+![Filtered](./Screenshots/filtered.PNG)
 
 *Disclaimer*
