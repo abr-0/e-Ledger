@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Register</class>
+ <widget class="QMainWindow" name="Register">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>750</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>750</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>750</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Lato</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>e-Ledger</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/img/img/ledger_small.png</normaloff>:/img/img/ledger_small.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#registerUsernameInput, #qs_1_input, #qs_2_input {
+	padding: 10px;
+	background-color: #fff;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	font-size: 20px;
+	color: #374957;
+}
+
+#registerUsernameInput:focus, #qs_1_input:focus, #qs_2_input:focus {
+	background-color: #E3E8F0;
+}
+
+#registerUsernameIcon, #qs_1_icon, #qs_2_icon, #registerPasswordIcon{
+	background-color: white;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	font-size: 20px;
+	qproperty-alignment: AlignCenter;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="usernameGroup">
+    <property name="geometry">
+     <rect>
+      <x>228</x>
+      <y>130</y>
+      <width>291</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: none;</string>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QLabel" name="registerUsernameIcon">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>51</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="buddy">
+      <cstring>registerUsernameInput</cstring>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="registerUsernameInput">
+     <property name="geometry">
+      <rect>
+       <x>49</x>
+       <y>0</y>
+       <width>240</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lato</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string>Enter a valid password.</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="placeholderText">
+      <string>Username</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="registerHeader">
+    <property name="geometry">
+     <rect>
+      <x>245</x>
+      <y>45</y>
+      <width>257</width>
+      <height>42</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Lato</family>
+      <pointsize>-1</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #fff;
+font-size: 35px;</string>
+    </property>
+    <property name="text">
+     <string>REGISTER HERE</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="passwordGroup">
+    <property name="geometry">
+     <rect>
+      <x>228</x>
+      <y>338</y>
+      <width>291</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: none;</string>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QLineEdit" name="registerPasswordInput">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>0</y>
+       <width>190</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lato</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string>Enter a valid password.</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#registerPasswordInput {
+	padding: 10px;
+	font-size: 20px;
+	color: #374957;
+}
+
+#registerPasswordInput:focus {
+	background-color:#E3E8F0;
+}</string>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Normal</enum>
+     </property>
+     <property name="placeholderText">
+      <string>Password</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="registerPasswordIcon">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>51</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="buddy">
+      <cstring>registerPasswordInput</cstring>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="show_hide_pwd_btn">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>0</y>
+       <width>51</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="toolTip">
+      <string>Click here to view/hide password.</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: white;
+border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;
+font-size: 20px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="registerButton">
+    <property name="geometry">
+     <rect>
+      <x>228</x>
+      <y>406</y>
+      <width>291</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Lato</family>
+      <pointsize>-1</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>Click here to register.</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#registerButton {
+	background-color: #32D736;
+	border-radius: 10px;
+	color: #fff;
+	font-size: 20px;
+	padding: 8px;
+}
+
+#registerButton:hover {
+	background-color: #34E038;
+}
+
+
+</string>
+    </property>
+    <property name="text">
+     <string>REGISTER</string>
+    </property>
+    <property name="shortcut">
+     <string>Return</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="haveAccount">
+    <property name="geometry">
+     <rect>
+      <x>293</x>
+      <y>87</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: none;</string>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QPushButton" name="login_button">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>0</y>
+       <width>41</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lato</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="toolTip">
+      <string>Click here to login.</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#login_button {
+	font-size: 15px;
+	background-color: transparent;
+	color: #32D736;
+}
+
+#login_button:hover {
+	color: #3EF642;
+}</string>
+     </property>
+     <property name="text">
+      <string>Login</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="have_account_message">
+     <property name="geometry">
+      <rect>
+       <x>-2</x>
+       <y>4</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lato</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size: 15px;
+background-color: transparent;
+color: #fff;</string>
+     </property>
+     <property name="text">
+      <string> Have an account?</string>
+     </property>
+     <property name="buddy">
+      <cstring>login_button</cstring>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="question_2_group">
+    <property name="geometry">
+     <rect>
+      <x>227</x>
+      <y>269</y>
+      <width>297</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: none;</string>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QLabel" name="qs_2_icon">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>51</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: white;
+border-top-left-radius: 10px;
+border-bottom-left-radius: 10px;
+font-size: 20px;
+qproperty-alignment: AlignCenter;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="buddy">
+      <cstring>registerUsernameInput</cstring>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="qs_2_input">
+     <property name="geometry">
+      <rect>
+       <x>49</x>
+       <y>0</y>
+       <width>243</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lato</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string>What was your first pet's name?</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#registerUsernameInput {
+	padding: 10px;
+	background-color: #fff;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	font-size: 20px;
+	color: #374957;
+}
+
+#registerUsernameInput:focus {
+	background-color: #E3E8F0;
+}</string>
+     </property>
+     <property name="placeholderText">
+      <string>Your first pet's name</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="question_2_group_2">
+    <property name="geometry">
+     <rect>
+      <x>227</x>
+      <y>199</y>
+      <width>291</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: none;</string>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QLabel" name="qs_1_icon">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>51</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: white;
+border-top-left-radius: 10px;
+border-bottom-left-radius: 10px;
+font-size: 20px;
+qproperty-alignment: AlignCenter;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="buddy">
+      <cstring>registerUsernameInput</cstring>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="qs_1_input">
+     <property name="geometry">
+      <rect>
+       <x>49</x>
+       <y>0</y>
+       <width>241</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lato</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string>Who was your childhood hero?</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#registerUsernameInput {
+	padding: 10px;
+	background-color: #fff;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	font-size: 20px;
+	color: #374957;
+}
+
+#registerUsernameInput:focus {
+	background-color: #E3E8F0;
+}</string>
+     </property>
+     <property name="placeholderText">
+      <string>Your childhood hero</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="help_button">
+    <property name="geometry">
+     <rect>
+      <x>699</x>
+      <y>20</y>
+      <width>32</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>Help</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>registerUsernameInput</tabstop>
+  <tabstop>qs_1_input</tabstop>
+  <tabstop>qs_2_input</tabstop>
+  <tabstop>registerPasswordInput</tabstop>
+  <tabstop>show_hide_pwd_btn</tabstop>
+  <tabstop>registerButton</tabstop>
+  <tabstop>login_button</tabstop>
+ </tabstops>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

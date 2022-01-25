@@ -1,0 +1,31 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>img/ledger.png</file>
+        <file>img/user_green.png</file>
+        <file>img/bg.png</file>
+        <file>img/lock_green_outline.png</file>
+        <file>img/ledger_small.png</file>
+        <file>img/splash_screen.gif</file>
+        <file>img/hide.png</file>
+        <file>img/show.png</file>
+        <file>img/hashtag.png</file>
+        <file>img/csv.png</file>
+        <file>img/delete.png</file>
+        <file>img/location.png</file>
+        <file>img/name.png</file>
+        <file>img/pencil.png</file>
+        <file>img/ru.png</file>
+        <file>img/calendar.png</file>
+        <file>img/phone.png</file>
+        <file>img/eye.png</file>
+        <file>img/save.png</file>
+        <file>img/filter.png</file>
+        <file>img/sort.png</file>
+        <file>img/refresh.png</file>
+        <file>img/pet.png</file>
+        <file>img/superhero.png</file>
+        <file>img/line-chart.png</file>
+        <file>img/logout.png</file>
+        <file>img/question.png</file>
+    </qresource>
+</RCC>

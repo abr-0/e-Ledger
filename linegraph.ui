@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LineGraph</class>
+ <widget class="QMainWindow" name="LineGraph">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>750</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1000</width>
+    <height>750</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1000</width>
+    <height>750</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>e-Ledger</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/img/img/ledger_small.png</normaloff>:/img/img/ledger_small.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #ebedee;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QCustomPlot" name="customPlot" native="true">
+    <property name="geometry">
+     <rect>
+      <x>29</x>
+      <y>65</y>
+      <width>941</width>
+      <height>591</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Graph is displayed here.</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: none;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="plot_title">
+    <property name="geometry">
+     <rect>
+      <x>29</x>
+      <y>24</y>
+      <width>941</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Lato</family>
+      <pointsize>-1</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">qproperty-alignment: AlignCenter;
+background-color: #fff;
+color: #374957;
+font-size: 18px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>664</y>
+      <width>941</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#label, #select_buyer_btn, #select_seller_btn, #select_all_btn{
+	background-color: transparent;
+	color: #374957;
+	font-size: 17px;
+}
+
+#select_month_menu, #view_by_menu{
+	border-radius: 8px;
+	background-color: #fff;
+	font-size: 17px;
+	color: #374957;
+}
+
+#view_btn{
+	border-radius: 8px;
+	font-weight: bold;
+	font-size: 17px;
+	color: #fff;
+	padding: 8px;
+	background-color: #32D736;
+}
+
+#view_btn:hover {
+	background-color: #34E038;
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QComboBox" name="view_by_menu">
+     <property name="geometry">
+      <rect>
+       <x>333</x>
+       <y>20</y>
+       <width>191</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>On what basis you want to view the graph?</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>20</y>
+       <width>131</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>For the month of</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="select_all_btn">
+     <property name="geometry">
+      <rect>
+       <x>752</x>
+       <y>27</y>
+       <width>61</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>All</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="select_seller_btn">
+     <property name="geometry">
+      <rect>
+       <x>654</x>
+       <y>27</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Seller</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="view_btn">
+     <property name="geometry">
+      <rect>
+       <x>839</x>
+       <y>20</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lato</family>
+       <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="toolTip">
+      <string>Click here to display graph.</string>
+     </property>
+     <property name="text">
+      <string>  View</string>
+     </property>
+     <property name="shortcut">
+      <string>Ctrl+V</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="select_buyer_btn">
+     <property name="geometry">
+      <rect>
+       <x>551</x>
+       <y>27</y>
+       <width>95</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Buyer</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="select_month_menu">
+     <property name="geometry">
+      <rect>
+       <x>144</x>
+       <y>20</y>
+       <width>171</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Select desired month.</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="help_button">
+    <property name="geometry">
+     <rect>
+      <x>922</x>
+      <y>35</y>
+      <width>32</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>Help</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>select_month_menu</tabstop>
+  <tabstop>view_by_menu</tabstop>
+  <tabstop>select_buyer_btn</tabstop>
+  <tabstop>select_seller_btn</tabstop>
+  <tabstop>select_all_btn</tabstop>
+  <tabstop>view_btn</tabstop>
+ </tabstops>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
